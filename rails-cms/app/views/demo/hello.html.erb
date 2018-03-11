@@ -1,0 +1,15 @@
+<p> wow this is hello </p>
+
+<%= link_to 'Index page', :action => :index, :page => 5, :id => 20 %>
+
+<% @array.each do |n| %>
+    <%= n %> <br/>
+    <% puts n %>
+<% end %>
+
+<br>
+ID: <%= @id %>
+<br>
+ID: <%= params[:id] %>
+<br>
+Page: <%= params[:page] %>
