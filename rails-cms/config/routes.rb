@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # defines the root url map
   # It means when user hits, rooturl/ of my site.
   # The DemoController's index function is called.

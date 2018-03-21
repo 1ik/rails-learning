@@ -1,4 +1,5 @@
 class Subject < ApplicationRecord
+  has_many :pages
 
   scope :visible, -> {
     where :visible => true
@@ -12,8 +13,8 @@ class Subject < ApplicationRecord
     order 'created_at DESC'
   }
 
-  scope :sorted, -> {
-    order 'position ASC'
+  scope :sorted, -> (column) {
+    order "#{column} ASC"
   }
 
   scope :search, -> (query) {
